@@ -25,3 +25,7 @@ hs_err_pid*
 # Ignora PDF y docx
 *.pdf
 *.docx
+*.iml
+.idea/
+out/
+plantilla.java
