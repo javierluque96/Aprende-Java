@@ -6,7 +6,7 @@ public class Ejercicio16 {
 	
   public static void main (String[] args) {
     int n;
-    int primo = 0;
+    boolean primo = true;
 
     
     System.out.println("Este programa comprueba si el numero es primo.");
@@ -14,14 +14,13 @@ public class Ejercicio16 {
     System.out.println("Introduce el numero primo:");
     n = Integer.parseInt(System.console().readLine());
     
-    for(int i = 1; i <= n; i++){
-      
+    for(int i = 2; i < n; i++){
       if(n % i == 0){
-	primo++;
+	primo = false;
       }
     }
     
-    if(primo <= 2){
+    if(primo){
       System.out.println("El numero " + n + " es primo.");
    
     } else {

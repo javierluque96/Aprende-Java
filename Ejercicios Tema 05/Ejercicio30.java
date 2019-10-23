@@ -28,8 +28,8 @@ public class Ejercicio30 {
       
       // Comprueba que los datos introducidos son correctos
       if(dia1 > dia2 || dia1 == dia2){
-	System.out.println("Dias introducidos errones. Vuelve a introducir los "
-	  + "datos.");
+	System.out.println("Dias introducidos erroneos. Vuelve a introducir los"
+	  + " datos.");
 	datosCorrectos = false;
 	  
       } else if (dia1 == 0 || dia2 == 0 || dia1 > 7 || dia2 > 7){
