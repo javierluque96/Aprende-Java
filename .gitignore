@@ -25,6 +25,8 @@ hs_err_pid*
 # Ignora PDF y docx
 *.pdf
 *.docx
+
+# Ignora archivos de IntelliJ Idea y plantilla para los ejercicios
 *.iml
 .idea/
 out/
