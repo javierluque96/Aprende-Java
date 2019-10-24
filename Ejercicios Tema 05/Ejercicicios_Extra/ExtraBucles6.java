@@ -4,7 +4,6 @@ public class ExtraBucles6 {
     System.out.print("Introduce la altura (al menos 5): ");
     int altura = Integer.parseInt(System.console().readLine());
     
-    int anchura = altura;
     int espacios = 0;
     int i, j;
     int huecos;
@@ -14,13 +13,13 @@ public class ExtraBucles6 {
       if (espacios == 3) {
 	espacios = 0;
       }
-      // Introduce espacios
+      // Introduce el caracter '-'
       for (j = 0; j < espacios; j++) {
 	System.out.print("-");
 	huecos++;
       }
       
-      // Introduce asteriscos
+      // Introduce el caracter 'o' y '-'
       for (j = 0; j < altura / 2; j++){
 	if (huecos < altura) {
 	  System.out.print("o");
@@ -30,8 +29,8 @@ public class ExtraBucles6 {
 	if (huecos < altura) {
 	  System.out.print("-");
 	}
-	
 	huecos++;
+	
 	if (huecos < altura) {
 	  System.out.print("-");
 	}
