@@ -1,12 +1,11 @@
-public class Ejercicio32 {
+public class Ejercicio32v3 {
 	
   public static void main (String[] args) {
     
     long num;
-    long inverso = 0;
-    int pares;
+    int digito = 0;
     int sumaPares = 0;
-    int longitud = 0;
+    String pares = "";
     
     System.out.println("Este programa busca los números pares que tenga un "
       + "numero entero positivo y los suma.");
@@ -14,24 +13,18 @@ public class Ejercicio32 {
     System.out.println("Por favor, introduzca un número entero positivo:");
     num = Long.parseLong(System.console().readLine());
     
-    System.out.print("Dígitos pares: ");
-    
     while(num > 0){
-      inverso = (inverso * 10) + (num % 10);
-      longitud++;
+      digito = (int)num % 10;
+      
+      // pares acumula los pares del número de izquierda a derecha
+      if(digito % 2 == 0){
+	pares = Integer.toString(digito) + " " + pares;
+	sumaPares += digito;
+      }
       num /= 10;
     }
     
-    while (longitud > 0){
-      pares = (int)inverso % 10;
-      inverso /= 10;
-      
-      if(pares % 2 == 0){
-	System.out.print(pares + " ");
-	sumaPares += pares;
-      }
-      longitud--;
-    }
+    System.out.print("Dígitos pares: " + pares);
     System.out.println("\nSuma de los dígitos pares: " + sumaPares);
   }
 }
