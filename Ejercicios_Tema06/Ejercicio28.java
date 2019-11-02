@@ -22,9 +22,9 @@ public class Ejercicio28 {
       
       // Concatena los valores del array resultado
       if (i % 2 == 0) {
-	valorRes1 += String.format("%6d", random);
-      } else {
 	valorRes2 += String.format("%6d", random);
+      } else {
+	valorRes1 += String.format("%6d", random);
       }
     }
     
