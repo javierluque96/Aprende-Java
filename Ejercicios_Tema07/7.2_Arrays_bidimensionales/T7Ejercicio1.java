@@ -1,6 +1,5 @@
 public class T7Ejercicio1 {
   
-  
   public static void main (String[] args) {
     int[][] numero = new int[3][6]; // 3 Filas y 6 Columnas 
     int fila, columna;
