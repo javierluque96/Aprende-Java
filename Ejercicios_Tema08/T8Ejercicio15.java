@@ -1,3 +1,5 @@
+import matematicas.Varias;
+
 public class T8Ejercicio15 {
   
   public static void main (String[] args) {
