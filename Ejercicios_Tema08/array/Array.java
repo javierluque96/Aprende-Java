@@ -16,7 +16,7 @@ public class Array {
   }
   
   /**
-   * Ejercicio 21. Genera un array con el tamaño que le indiquemos con números
+   * Ejercicio 20. Genera un array con el tamaño que le indiquemos con números
    * aleatorios. El intervalo (mínimo y máximo) de los números aleatorios se
    * los indicaremos como parámetros.
    * 
@@ -35,7 +35,7 @@ public class Array {
   } 
   
   /**
-   * Ejercicio 22. Devuelve el mínimo del array que se pasa como parámetro.
+   * Ejercicio 21. Devuelve el mínimo del array que se pasa como parámetro.
    * 
    * @param x array de números enteros
    * @return  mínimo de los números del array
@@ -52,7 +52,7 @@ public class Array {
   }
   
   /**
-   * Ejercicio 23. Devuelve el máximo del array que se pasa como parámetro.
+   * Ejercicio 22. Devuelve el máximo del array que se pasa como parámetro.
    * 
    * @param x array de números enteros
    * @return  máximo de los números del array
@@ -69,7 +69,7 @@ public class Array {
   }
   
   /**
-   * Ejercicio 24. Devuelve el máximo del array que se pasa como parámetro.
+   * Ejercicio 23. Devuelve el máximo del array que se pasa como parámetro.
    * 
    * @param x array de números enteros
    * @return  media de los números del array
@@ -84,7 +84,7 @@ public class Array {
   }
   
   /**
-   * Ejercicio 25. Dice si un número está en un array o no.
+   * Ejercicio 24. Dice si un número está en un array o no.
    * 
    * @param x array de números enteros
    * @param y número que queremos saber si está en el array
@@ -101,7 +101,7 @@ public class Array {
   }
   
   /**
-   * Ejercicio 26. Dice la posición que ocupa un número en un array.
+   * Ejercicio 25. Dice la posición que ocupa un número en un array.
    * 
    * @param x array de números enteros
    * @param d digito que queremos saber la posición que ocupa
@@ -118,7 +118,7 @@ public class Array {
   }
   
   /**
-   * Ejercicio 27. Le da la vuelta a un array.
+   * Ejercicio 26. Le da la vuelta a un array.
    * 
    * @param x array de números enteros
    * @return  array volteado
@@ -132,5 +132,60 @@ public class Array {
     }
     return volteado;
   }
+  
+  /**
+   * Ejercicio 27. Rota n posiciones a la derecha los números de un array.
+   * 
+   * @param x array de números enteros
+   * @param n número de veces que queremos rotar a la derecha el array
+   * @return  array rotado a la derecha n veces
+   */
+  public static int[] rotaDerechaArrayInt(int[] x, int n) {
+    int aux;
+    // Clona el array que pasamos por parámetro
+    int[] rotado = x.clone(); 
+    
+    // Rota el array n veces a la derecha
+    while (n > 0) {
+      aux = rotado[rotado.length - 1];
+      
+      for(int i = rotado.length - 1; i >= 0; i--) {
+	if(i > 0) {
+	  rotado[i] = rotado[i - 1];
+	}
+      }
+      
+      rotado[0] = aux;
+      n--;
+    }
+    return rotado;
+  }
+  
+  /**
+   * Ejercicio 27. Rota n posiciones a la izquierda los números de un array.
+   * 
+   * @param x array de números enteros
+   * @param n número de veces que queremos rotar a la izquierda el array
+   * @return  array rotado a la izquierda n veces
+   */
+  public static int[] rotaIzquierdaArrayInt(int[] x, int n) {
+    int aux;
+    // Clona el array que pasamos por parámetro
+    int[] rotado = x.clone(); 
+    
+    // Rota el array n veces a la izquierda
+    while (n > 0) {
+      aux = rotado[0];
+      
+      for(int i = 0; i < rotado.length - 1; i++) {
+	rotado[i] = rotado[i + 1];
+      }
+      
+      rotado[rotado.length - 1] = aux;
+      n--;
+    }
+    return rotado;
+  }
+  
 }
 

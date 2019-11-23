@@ -5,6 +5,7 @@ public class T8Ejercicio20a28 {
   public static void main (String[] args) {
     int[] a = array.Array.generaArrayInt(20, 0, 100);
     
+    System.out.print("Array original: ");
     array.Array.muestraArrayInt(a);
     
     System.out.println("Mínimo: " + array.Array.minimoArrayInt(a));
@@ -24,13 +25,15 @@ public class T8Ejercicio20a28 {
     System.out.print("Array al revés: ");
     array.Array.muestraArrayInt(array.Array.volteaArrayInt(a));
     
-    /*
     System.out.print("Array rotado 3 pasos a la derecha: ");
     array.Array.muestraArrayInt(array.Array.rotaDerechaArrayInt(a, 3));
     
     System.out.print("Array rotado 4 pasos a la izquierda: ");
     array.Array.muestraArrayInt(array.Array.rotaIzquierdaArrayInt(a, 4));
-    */
+    
+    System.out.print("Array original: ");
+    array.Array.muestraArrayInt(a);
+    
   } 
 }
 
