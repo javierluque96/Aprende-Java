@@ -29,7 +29,7 @@ public class T7Ejercicio9 {
 	  resultado[x][y] = num[x][y - 1];
 	}
       }
-      // Rota de abaajo a arriba los números 
+      // Rota de abajo a arriba los números 
       // de las columnas de la parte izquierda por capa
       for (y = 0; y < inicioColumna; y++) {
 	resultado[x][y] = num[x + 1][y];
