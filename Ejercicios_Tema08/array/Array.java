@@ -187,5 +187,36 @@ public class Array {
     return rotado;
   }
   
+  /**
+   * Ejercicio 36. Devuelve un array con todos los números primos que se 
+   * encuentran en otro array que se pasa como parámetro. El tamaño del array
+   * que se devuelve será menor o igual que se pasa como parámetro.
+   * 
+   * @param x array de números enteros
+   * @return  array rotado a la izquierda n veces
+   */
+  public static int[] filtraPrimos(int x[]) {
+    int[] aux = new int[x.length];
+    int indice = 0, i, j;
+    
+    for (i = 0; i < x.length; i++) {
+      if (matematicas.Varias.esPrimo(x[i])) {
+	aux[indice++] = x[i];
+      }
+    }
+    
+    if(indice == 0) {
+      int[] primos = {-1};
+      
+      return primos;
+    } else {
+      int[] primos = new int[indice];
+      
+      for (i = 0; i < indice; i++) {
+	primos[i] = aux[i];
+      }
+      return primos;
+    }
+  }
 }
 
