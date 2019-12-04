@@ -197,7 +197,7 @@ public class Array {
    */
   public static int[] filtraPrimos(int x[]) {
     int[] aux = new int[x.length];
-    int indice = 0, i, j;
+    int indice = 0, i;
     
     for (i = 0; i < x.length; i++) {
       if (matematicas.Varias.esPrimo(x[i])) {
@@ -229,11 +229,45 @@ public class Array {
    */
   public static int[] filtraCapicuas(int x[]) {
     int[] aux = new int[x.length];
-    int indice = 0, i, j;
+    int indice = 0, i;
     
     for (i = 0; i < x.length; i++) {
       if (matematicas.Varias.esCapicua(x[i])) {
 	aux[indice++] = x[i];
+      }
+    }
+    
+    if(indice == 0) {
+      int[] c = {-1};
+      
+      return c;
+    } else {
+      int[] c = new int[indice];
+      
+      for (i = 0; i < indice; i++) {
+	c[i] = aux[i];
+      }
+      return c;
+    }
+  }
+  
+  /**
+   * Ejercicio 40. Devuelve un array con todos los números que contienen el 7
+   * que se encuentran en un array que se pasa como parámetro. El tamaño del 
+   * array que se devuelve será menor o igual que se pasa como parámetro.
+   * 
+   * @param x array de números enteros
+   * @return  array rotado a la izquierda n veces
+   */
+  public static int[] filtraCon7(int x[]) {
+    int[] aux = new int[x.length];
+    int indice = 0, i, j;
+    
+    for (i = 0; i < x.length; i++) {
+      for (j = 0; j < matematicas.Varias.digitos(x[i]); j++) {
+	if(matematicas.Varias.digitoN(x[i], j) == 7) {
+	  aux[indice++] = x[i];
+	}
       }
     }
     

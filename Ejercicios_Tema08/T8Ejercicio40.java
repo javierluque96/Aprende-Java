@@ -2,16 +2,16 @@ import java.util.Scanner;
 
 import array.Array;
 
-public class T8Ejercicio38 {
+public class T8Ejercicio40 {
   
   public static void main (String[] args) {
     // Función que pide en el ejercicio está en el archivo de Array
     
-    int[] a = {202, 4, 303, 112, 1001, 1551, 1231, 55, 8998, };
-    array.Array.muestraArrayInt(array.Array.filtraCapicuas(a));
+    int[] a = {7, 0, 207, 274, 700, 1571, 1231, 55, 8998, };
+    array.Array.muestraArrayInt(array.Array.filtraCon7(a));
     
     int[] b = {42, 61, 83, 94, 10, 12};
-    array.Array.muestraArrayInt(array.Array.filtraCapicuas(b));
+    array.Array.muestraArrayInt(array.Array.filtraCon7(b));
   } 
 }
 
