@@ -16,6 +16,18 @@ public class Array {
   }
   
   /**
+   * Muestra todos los números enteros de un array unidimensonal por pantalla.
+   * 
+   * @param x[] array unidimensional de cadena de caracteres
+   */
+  public static void muestraArrayString(String x[]) {
+    for(String a : x) {
+      System.out.print(a + " ");
+    }
+    System.out.println();
+  }
+  
+  /**
    * Ejercicio 20. Genera un array con el tamaño que le indiquemos con números
    * aleatorios. El intervalo (mínimo y máximo) de los números aleatorios se
    * los indicaremos como parámetros.
@@ -389,5 +401,45 @@ public class Array {
     
     return contador;
   }
+  
+  /**
+   * Ejercicio 55. Quita la repeticiones de un array de String. Se distinguen
+   * mayúsculas de mínusculas. Por ejemplo, hola != Hola.
+   * 
+   * @param s[] array de String
+   * @return    devuleve el mismo array quitando los String repetidos
+   */
+  public static String[] sinRepetir(String[] s) {
+    
+    String[] aux  = new String[s.length];
+    String[] resultado;
+    int i, j, contador, indice = 0;
+    
+    for (i = 0; i < s.length; i++) {
+      contador = 0;
+      
+      // Obtenemos cuantas veces se repite cada elemento del array
+      for (j = 0; j < i; j++) {
+	if (s[i] == s[j]) {
+	  contador++;
+	}
+      }
+      
+      // Si no se repite lo metemos en un array auxiliar
+      if (contador == 0) {
+	aux[indice++] = s[i];
+      }
+    }
+    
+    resultado = new String[indice];
+    
+    for (i = 0; i < indice; i++) {
+      resultado[i] = aux[i];
+    }
+    
+    return resultado;
+  }
+  
+  
 }
 

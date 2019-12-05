@@ -190,5 +190,29 @@ public class ArrayBi {
     
     return -1;
   }
+  
+  /** 
+   * Ejercicio 56. Extrae la capa exterior de un array bidimensional. Esta capa
+   * se extrae en forma de array unidimensional. La extracción de números 
+   * comienza en la esquina superior izquierda y continúa en el sentido de las
+   * agujas del reloj.
+   * 
+   * @param x[][]    array bidimensional de números enteros
+   * @return 	     número que ocupa la posición o -1 si la posición es 
+   * 		     incorrecta
+   */
+  public static int[] corteza(int[][] x) {
+    int[] resultado = new int[2 * (x.length + x[0].length) - 4];
+    int indice = 0;
+    
+    for (int i = 0; i < x.length; i++) {
+      for (int j = 0; j < x[0].length; j++) {
+	if (i == 0 || i == (x.length - 1) || j == 0 || j == (x[0].length - 1)) {
+	  resultado[indice++] = x[i][j];
+	}
+      }
+    }
+    return resultado;
+  }
 }
 
