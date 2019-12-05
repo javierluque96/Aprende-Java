@@ -361,5 +361,25 @@ public class Varias {
   public static int juntaNumeros(int n1, int n2) {
     return (int)juntaNumeros((long)n1, (long)n2);
   }
+  
+  /**
+   * Ejercicio 54. Devuelve el número de veces que aparece un dígito dentro de 
+   * un número .
+   * 
+   * @param digito dígito que queremos saber cuantas veces se repite 
+   * @param n      número entero
+   * @return  	   número de veces que se repite digito en n
+   */
+  public static int ocurrencias(int digito, int n) {
+    int contador = 0;
+  
+    for (int i = 0; i < digitos(n); i++) {
+      if (digitoN(n, i) == digito) {
+	contador++;
+      }
+    }
+    
+    return contador;
+  }
 }
 

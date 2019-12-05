@@ -357,5 +357,37 @@ public class Array {
     
     return resultado;
   }
+  
+  /**
+   * Ejercicio 52. Esta función debe devolver un número del array escogido al 
+   * azar entre todos los disponibles. Por ejemplo, si a = {111, 222, 333, 444}, 
+   * aleatorioDeArray(a) podría devolver el 111, el 222, el 333 o el 444. 
+   * Si b = {52, 37}, aleatorioDeArray(b) podría devolver el 52 o el 37.
+   * 
+   * @param a array de números enteros
+   * @return  número del array escogido al azar
+   */
+  public static int aleatorioDeArray(int[] a) {
+    
+    return a[(int)(Math.random() * a.length)];
+    
+  }
+  
+  /** 
+   * Ejercicio 54. Devuelve el número de veces que aparece un dígito en una 
+   * serie de números contenidos en un array.
+   * 
+   * @param a array de números enteros
+   * @return  número del array escogido al azar
+   */
+  public static int ocurrencias(int digito, int[] a) {
+    int contador = 0;
+    
+    for (int n : a) {
+      contador += Varias.ocurrencias(digito, n);
+    }
+    
+    return contador;
+  }
 }
 

@@ -163,5 +163,32 @@ public class ArrayBi {
     
     return d;
   }
+  
+  /** Ejercicio 53.Devuelve el número que ocupa la posición n-esima dentro de
+   * un array bidimensional contando de izquierda a derecha y de arriba a abajo.
+   * El primer elemento es el 0. 
+   * 
+   * @param n[][]    array bidimensional de números enteros
+   * @param posicion posición dentro del array bidimensional
+   * @return 	     número que ocupa la posición o -1 si la posición es 
+   * 		     incorrecta
+   */
+  public static int nEsimo(int[][] n, int posicion) {
+    int contador = 0;
+    if (posicion > n.length * n[0].length) {
+      return -1;
+    }
+    
+    for (int i = 0; i < n.length; i++) {
+      for (int j = 0; j < n[0].length; j++) {
+	if(posicion == contador) {
+	  return n[i][j];
+	}
+	contador++;
+      }
+    }
+    
+    return -1;
+  }
 }
 
