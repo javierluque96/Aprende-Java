@@ -11,12 +11,9 @@ public class T8Ejercicio56 {
     int[][] a = ArrayBi.generaArrayBiInt(3, 8, 1, 100);
     ArrayBi.muestraArrayBiInt(a);
     
-    
     System.out.println("\nLa corteza del array es ");
     
     Array.muestraArrayInt(ArrayBi.corteza(a));
-      
-
 
   } 
 }
