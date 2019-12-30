@@ -15,22 +15,12 @@ public class Gatolandia {
     Scanner s = new Scanner(System.in);
     int i;
     
-    for (i = 0; i < gatos.length; i++) {
-      gatos[i] = new Gato();
-      
-      System.out.println("Introduce los datos del gato número " + (i + 1) + ":");
-
-      System.out.print("Nombre: ");
-      gatos[i].setNombre(s.next());
-      
-      System.out.print("Color: ");
-      gatos[i].setColor(s.next());
-      
-      System.out.print("Raza: ");
-      gatos[i].setRaza(s.next());
-    }
+    gatos[0] = new Gato("Chiqui", "Blanco", "Hembra");
+    gatos[1] = new Gato("Copito de Nieve", "Negro", "Macho");
+    gatos[2] = new Gato("Felix", "Naranja", "Macho");
+    gatos[3] = new Gato("Luna", "Atigrado", "Hembra");
     
-    System.out.println();
+    
     
     for (i = 0; i < gatos.length; i++) {
       System.out.println("Datos del gato número " + (i + 1) + ":");
@@ -38,6 +28,8 @@ public class Gatolandia {
       System.out.println("Nombre: " + gatos[i].getNombre());
       System.out.println("Color: " + gatos[i].getColor());
       System.out.println("Raza: " + gatos[i].getRaza());
+      
+      System.out.println();
     }
   }
 }
