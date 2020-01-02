@@ -1,6 +1,6 @@
 /**
  * Coleccion.java
- * Ejercicio 3.
+ * Ejercicio 4.
  * @author Javier Luque Rodríguez
  */
 
@@ -15,7 +15,6 @@ public class Coleccion {
     String autor; 
     String genero;
     int i;
-    int libre;
     int[] duracion = new int[2];
     int discosLibres = 100;
     boolean repetido;
