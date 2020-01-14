@@ -1,0 +1,42 @@
+* {
+	font-family: sans-serif;
+}
+
+h1, p {
+	text-align: center;
+}
+
+form {
+	line-height: 2;
+	text-align: center;
+}
+
+.sabor {
+	text-align: center;
+	padding: 20px;
+}
+
+.contenedor {
+	display:flex;
+	justify-content: center;
+}
+
+.helado {
+	margin: 50px;
+}
+
+.tarrina {
+  width: 300px;
+  border: 10px solid green;
+  border-radius: 10px;
+  border-top-color: white;
+}
+
+.center {
+	text-align: center;
+	vertical-align: middle;
+}
+
+.error {
+	color: red;
+}

@@ -1,0 +1,28 @@
+* {
+	font-family: sans-serif;
+}
+
+body {
+	background-color: #028565;
+}
+
+.contenido {
+	position: absolute;
+	background-color: rgb(234, 234, 234);
+	padding: 20px 50px 50px 50px;
+	width: 60%;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: auto;
+	border-radius: 20px;
+	text-align: center;
+	box-shadow: 5px 10px 18px black;
+}
+
+img {
+	margin: 10px;
+}
+
+
+

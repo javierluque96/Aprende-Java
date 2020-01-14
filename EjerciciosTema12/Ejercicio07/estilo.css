@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+* {
+  font-family: sans-serif;
+}
+
+body {
+  background-image: url("imagenes/dinero.jpg");
+  background-size: cover;
+}
+
+.wrapper {
+  width: 80%;
+  margin: auto;
+  background-color: #6d6960;
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  margin-top: 0;
+}
+
+.dinero h2 {
+  text-align: center;
+}
+
+hr {
+	color: white;
+	margin-bottom: 20px;
+}
+
+

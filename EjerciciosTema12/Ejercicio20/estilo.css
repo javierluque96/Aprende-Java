@@ -1,0 +1,30 @@
+.negro {
+	background-color: black;
+}
+
+.blanco {
+	background-color: white;
+}
+
+.letraBlanca {
+	color: white;
+	padding: 20px;
+}
+
+body {
+  font-family: sans-serif;
+  background-image: url(imagenes/texturaverde.jpg);
+}
+
+table {
+  background-color: #46250f;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  border: 0px;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 10px;
+}

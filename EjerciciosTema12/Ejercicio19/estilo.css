@@ -1,0 +1,26 @@
+* {
+	font-family: sans-serif;
+}
+
+.contenido {
+	width: 60%;
+	margin: 10% auto;
+	background-color: rgb(234, 234, 234);
+	padding: 40px;
+	border-radius: 10px;
+}
+
+h1, h2 {
+	margin-top: 0;
+	text-align: center;
+}
+
+form {
+	line-height: 2.5;
+	text-align: center;
+}
+
+img {
+	display: block;
+	margin: auto;
+}

@@ -1,0 +1,27 @@
+* {
+	font-family: sans-serif;
+}
+
+.contenido {
+	background-color: rgb(220, 220, 220);
+	padding: 20px 50px 50px 50px;
+	width: 70%;
+	margin: 50px auto;
+	border-radius: 20px;
+	text-align: center;
+}
+
+h3 {
+	margin-bottom: 30px;
+}
+
+p {
+	border: 2px solid black;
+	width: 50%;
+	margin: 0 auto;
+	padding: 30px 30px 15px 30px;
+}
+
+.color {
+	color: #007cff;
+}
