@@ -67,8 +67,11 @@ public class Disco {
     this.duracion = duracion;
   }
   
+  /* Sobreescribimos el metodo equals para que el metodo remove de arraylist nos permita borrar
+   * en función de que tengan el mismo codigo. Este metodo compara los codigos de dos discos
+   * y devuelve true si son iguales o false si son distintos. */ 
   @Override
-  public boolean mismoCodigo(Object d) {
+  public boolean equals(Object d) {
     return (this.codigo).equals(((Disco)d).getCodigo());
   }
 }
