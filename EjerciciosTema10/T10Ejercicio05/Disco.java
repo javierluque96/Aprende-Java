@@ -1,6 +1,6 @@
 /**
  * Coleccion.java
- * Ejercicio 3.
+ * Ejercicio 5.
  * @author Javier Luque Rodríguez
  */
 

@@ -1,14 +1,15 @@
+import java.util.ArrayList;
+import java.util.Scanner;
 /**
  * Coleccion.java
  * Ejercicio 5.
  * @author Javier Luque Rodríguez
  */
-
-
 public class Coleccion {
 	
   public static void main (String[] args) {
     int opcion;
+    int opcionListado;
     String codigo;
     String autor;
     String titulo;
@@ -17,6 +18,12 @@ public class Coleccion {
     int i;
     int[] duracionList = new int[2];
     ArrayList <Disco> coleccion = new ArrayList<Disco>();
+    Scanner s = new Scanner(System.in);
+    
+    // DISCOS PREDEFINIDOS
+    coleccion.add(new Disco("BLP1577", "John Coltrane", "Blue Train", "hard bop", 43));
+    coleccion.add(new Disco("SAFR122", "RHCP", "Stadium Arcadium", "funk rock", 122));
+    coleccion.add(new Disco("TDSD36", "The Doors", "Strange Days", "psychodelic rock", 36));
     
     do {
       System.out.println("\n\nCOLECCIÓN DE DISCOS");
@@ -31,7 +38,6 @@ public class Coleccion {
       
       switch (opcion) {
 	case 1:
-	  case 1:
 	  System.out.println("\n\nOPCIONES DE LISTADO");
 	  System.out.println("===================");
 	  System.out.println("1. Completo");
@@ -82,8 +88,7 @@ public class Coleccion {
 	      } while(duracionList[0] > duracionList[1]);
 	      
 	      for (Disco d : coleccion) {
-		if (d.getDuracion() >= duracionList[0] && album[i].getDuracion() 
-		<= duracionList[1])) {
+		if (d.getDuracion() >= duracionList[0] && d.getDuracion() <= duracionList[1]) {
 		  System.out.println(d);
 		}
 	      }
@@ -108,35 +113,46 @@ public class Coleccion {
 	  System.out.print("Duración: ");
 	  duracion = (Integer.parseInt(System.console().readLine()));
 	  
-	  album.add(new Disco(codigo, autor, titulo, genero, duracion));
+	  coleccion.add(new Disco(codigo, autor, titulo, genero, duracion));
 	  break;
 	case 3:
 	  System.out.print("Introduce el código del disco que quieres cambiar: ");
 	  codigo = System.console().readLine();
 	  
+	  while (!coleccion.contains(new Disco(codigo, "", "", "", 0))) {
+	    System.out.print("Ese código no existe. Introduce el código de nuevo: ");
+	    codigo = System.console().readLine();
+	  }
 	  
+	  i = coleccion.indexOf(new Disco(codigo, "", "", "", 0));
 	  
+	  System.out.println("Introduce los datos del disco.");
 	  System.out.print("Código: ");
-	  album[i].setCodigo(System.console().readLine());
+	  coleccion.get(i).setCodigo(System.console().readLine());
 	  
 	  System.out.print("Autor: ");
-	  album[i].setAutor(System.console().readLine());
+	  coleccion.get(i).setAutor(System.console().readLine());
 	  
 	  System.out.print("Título: ");
-	  album[i].setTitulo(System.console().readLine());
+	  coleccion.get(i).setTitulo(System.console().readLine());
 	  
 	  System.out.print("Género: ");
-	  album[i].setGenero(System.console().readLine());
+	  coleccion.get(i).setGenero(System.console().readLine());
 	  
 	  System.out.print("Duración: ");
-	  album[i].setDuracion(Integer.parseInt(System.console().readLine()));
+	  coleccion.get(i).setDuracion(Integer.parseInt(System.console().readLine()));
 	  break;
 	case 4:
 	  System.out.print("Introduce el código del disco que quieres borrar: ");
 	  codigo = System.console().readLine();
 	  
-	  a.removeif(codigo.equals(a.get(codigo)));
+	  while (!coleccion.contains(new Disco(codigo, "", "", "", 0))) {
+	    System.out.print("Ese código no existe. Introduce el código de nuevo: ");
+	    codigo = System.console().readLine();
+	  }
 	  
+	  coleccion.remove(coleccion.indexOf(new Disco(codigo, "", "", "", 0)));
+
 	  System.out.println("Disco borrado.");
 	  break;
 	default:
