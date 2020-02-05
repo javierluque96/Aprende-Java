@@ -24,7 +24,17 @@ public class T10Ejercicio10 {
     d.put("Pato", "Duck");
     d.put("Hombre", "Man");
     d.put("Zapatos", "Shoes");
-    d.put("Simpático", "nice");
+    d.put("Simpático", "Nice");
+    d.put("Portatil", "Laptop");
+    d.put("Botella", "Bottle");
+    d.put("Ratón", "Mouse");
+    d.put("Superficie", "Surface");
+    d.put("Rueda", "Wheel");    
+    d.put("Neumático", "Tire");
+    d.put("Entre", "Among");
+    d.put("Repentino", "Sudden");
+    d.put("Bosque", "Forest");
+    d.put("Corriente", "Stream");
     
     System.out.print("Introduce la palabra que quieres traducir al ingles: ");
     palabra = System.console().readLine();
