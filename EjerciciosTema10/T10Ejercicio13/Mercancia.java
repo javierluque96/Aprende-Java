@@ -42,6 +42,18 @@ public class Mercancia {
     return codigo;
   }
   
+  public String getDescripcion() {
+    return descripcion;
+  }
+  
+  public double getPrecioCompra() {
+    return precioCompra;
+  }
+  
+  public double getPrecioVenta() {
+    return precioVenta;
+  }
+  
   public int getStock() {
     return stock;
   }
