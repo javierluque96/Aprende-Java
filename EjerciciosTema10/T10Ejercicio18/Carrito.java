@@ -2,14 +2,12 @@ import java.util.ArrayList;
 /**
  * @author Javier Luque Rodríguez
  * 
- * Una empresa de venta por internet de productos electrónicos nos ha encargado
- * implementar un carrito de la compra. Crea la clase Carrito. Al carrito se le
- * pueden ir agregando elementos que se guardarán en una lista, por tanto,
- * deberás crear la clase Elemento. Cada elemento del carrito deberá contener el
- * nombre del producto, su precio y la cantidad (número de unidades de dicho
- * producto). A continuación se muestra tanto el contenido del programa principal
- * como la salida que debe mostrar el programa. Los métodos a implementar se
- * pueden deducir del main.
+ * Mejora el programa anterior (en otro proyecto diferente) de tal forma que al 
+ * intentar agregar un elemento al carrito, se compruebe si ya existe el producto
+ * y, en tal caso, se incremente el número de unidades sin añadir un nuevo
+ * elemento. Observa que en el programa anterior, se repetía el producto “Tarjeta
+ * SD 64Gb” dos veces en el carrito. En esta nueva versión ya no sucede esto, si
+ * no que se incrementa el número de unidades del producto que se agrega.
  */
 public class Carrito {
   private ArrayList<Elemento> c = new ArrayList<Elemento>();
@@ -29,7 +27,13 @@ public class Carrito {
   }
   
   public void agrega(Elemento e) {
-    c.add(e);
+    if (!c.contains(e)) {
+      c.add(e);
+    } else {
+      int i = c.indexOf(e);
+      
+      c.get(i).setCantidad(c.get(i).getCantidad() + e.getCantidad());
+    }
   }
   
   public int numeroDeElementos() {
@@ -45,5 +49,4 @@ public class Carrito {
     
     return total;
   }
-  
 }
