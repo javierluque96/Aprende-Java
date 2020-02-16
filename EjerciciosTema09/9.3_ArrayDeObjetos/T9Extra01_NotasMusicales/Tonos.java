@@ -1,0 +1,5 @@
+public enum Tonos {
+  SILENCIO, DOB, DO, DOSOS, REB, RE, RESOS, MIB, MI, MISOS, FAB, FA, FASOS, SOLB, SOL, SOLSOS, LAB, 
+  LA, LASOS, SIB, SI, SISOS
+}
+ 
